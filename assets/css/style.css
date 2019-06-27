@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ultra', serif;
+    font-weight: lighter;
+}
+
+body{
+    margin: 0 auto;
+    background: black;
+}
+
+header {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h2 {
+    color: orange;
+    text-align: center;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    border: solid 5px orange;
+    color: white;
+    height: 225px;
+}
+
+.word {
+    float: left;
+    width: 55%;
+    padding: 5px;
+    text-align: center;
+    margin-right: 5px;
+    height: 220px;
+}
+
+.magic-word {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+}
+
+.guesstimation {
+    float: left;
+    height: 220px;
+    width: 40%;
+}
+
+#guesses-remaining {
+    padding: 5px;
+}
+
+.guessed {
+    padding: 0px;
+}
+
+#wins {
+    padding: 5px;
+}
