@@ -1,33 +1,44 @@
 //Variables
-var wordPool = ["Benson", "Elyse", "James", "Bruce", "Adam", "Lawrence", "Alanah", "Hitman", "Manhunter", "RoosterTeeth", "Arizona Circle"]
-var win = 0
-var remainingGuesses = 15
-var guessedLetters = []
-var randomWord = null
-
+var wordPool = ["Benson", "Elyse", "James", "Bruce", "Adam", "Lawrence", "Alanah", "Hitman", "Manhunter", "RoosterTeeth", "Arizona Circle"];
+var win = 0;
+var remainingGuesses = 15;
+var guessedLetters = [];
+var positions = [];
 //Generate random word
-randomWord = wordPool[Math.floor(Math.random() * wordPool.length)];
-  console.log(randomWord)
+document.onload = function () {
 
-//Change random word into dashes and display in box
+  var randomWord = wordPool[Math.floor(Math.random() * wordPool.length)];
+    console.log(randomWord);
 
+  //Change random word into dashes and display in box
+  var blanks = "";
+  for (var  i = 0; i < randomWord.length; i++) {
+    blanks = blanks + "_";
+  }
+  //document.getElementById("word-guess") = blanks.toString;
+    document.getElementById("word-guess") = blanks;
 
-//Take in user keys, push results to proper areas:
-//letters to fill in random word dashes if right or letters guessed if wrong,
-//guesses remainging decreases,
-//determine win condition, update wins if met, play interesting win thing, and reset
-//determine loss condition, play loss thing, and reset
+  //Take in user keys, push results to proper areas:
+  //document.onkeyup()
 
-//reset and reset functions
+  //letters to fill in random word dashes if right or letters guessed if wrong,
+  //guesses remainging decreases,
 
-var reset = function() {
+  //determine win condition, update wins if met, play interesting win thing, and reset
+
+  //determine loss condition, play loss thing, and reset
+
+  //reset and reset functions
+
+  var reset = function() {
     remainingGuesses = 15;
     lettersGuessed = [];
     resetRandomWord ();
-    
-}
+  };
 
-var resetRandomWord = function () {
-  randomWord = wordPool[Math.floor(Math.random() * wordPool.length)];
-  console.log(randomWord)
-}
+  var resetRandomWord = function () {
+    randomWord = wordPool[Math.floor(Math.random() * wordPool.length)];
+    console.log(randomWord)
+  };
+
+};
