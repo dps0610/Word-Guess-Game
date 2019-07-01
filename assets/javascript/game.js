@@ -5,18 +5,18 @@ var remainingGuesses = 15;
 var guessedLetters = [];
 var positions = [];
 //Generate random word
-document.onload = function () {
+window.onload = function () {
 
   var randomWord = wordPool[Math.floor(Math.random() * wordPool.length)];
     console.log(randomWord);
 
   //Change random word into dashes and display in box
-  var blanks = "";
+  var blanks = [];
   for (var  i = 0; i < randomWord.length; i++) {
-    blanks = blanks + "_";
+    blanks[i] = "_";
   }
   //document.getElementById("word-guess") = blanks.toString;
-    document.getElementById("word-guess") = blanks;
+    document.getElementById("word-guess").innerHTML = blanks.join(" ");
 
   //Take in user keys, push results to proper areas:
   //document.onkeyup()
